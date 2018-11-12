@@ -7,10 +7,7 @@ export const config: Config = {
     sass({
       injectGlobalPaths: [
         'src/global/_normalize.scss',
-        // 'src/globals/_mixins.scss',
-        // 'src/globals/_colors.scss',
-        // 'src/globals/_variables.scss',
-        // 'src/globals/_typography.scss'
+        // 'src/globals/_variables.scss'
       ]
     })
   ]
