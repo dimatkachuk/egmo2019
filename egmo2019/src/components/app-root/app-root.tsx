@@ -2,8 +2,7 @@ import { Component } from '@stencil/core';
 
 @Component({
   tag: 'app-root',
-  styleUrl: 'app-root.css',
-  shadow: true
+  styleUrl: 'app-root.scss'
 })
 export class AppRoot {
 
