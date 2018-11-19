@@ -17,17 +17,35 @@ export namespace Components {
 
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
+
+  interface AppUsefulInformationItem {
+    'viewState': any;
+  }
+  interface AppUsefulInformationItemAttributes extends StencilHTMLAttributes {
+    'viewState'?: any;
+  }
+
+  interface AppUsefulInformation {
+    'viewState': any;
+  }
+  interface AppUsefulInformationAttributes extends StencilHTMLAttributes {
+    'viewState'?: any;
+  }
 }
 
 declare global {
   interface StencilElementInterfaces {
     'AppHeader': Components.AppHeader;
     'AppRoot': Components.AppRoot;
+    'AppUsefulInformationItem': Components.AppUsefulInformationItem;
+    'AppUsefulInformation': Components.AppUsefulInformation;
   }
 
   interface StencilIntrinsicElements {
     'app-header': Components.AppHeaderAttributes;
     'app-root': Components.AppRootAttributes;
+    'app-useful-information-item': Components.AppUsefulInformationItemAttributes;
+    'app-useful-information': Components.AppUsefulInformationAttributes;
   }
 
 
@@ -43,14 +61,30 @@ declare global {
     new (): HTMLAppRootElement;
   };
 
+  interface HTMLAppUsefulInformationItemElement extends Components.AppUsefulInformationItem, HTMLStencilElement {}
+  var HTMLAppUsefulInformationItemElement: {
+    prototype: HTMLAppUsefulInformationItemElement;
+    new (): HTMLAppUsefulInformationItemElement;
+  };
+
+  interface HTMLAppUsefulInformationElement extends Components.AppUsefulInformation, HTMLStencilElement {}
+  var HTMLAppUsefulInformationElement: {
+    prototype: HTMLAppUsefulInformationElement;
+    new (): HTMLAppUsefulInformationElement;
+  };
+
   interface HTMLElementTagNameMap {
     'app-header': HTMLAppHeaderElement
     'app-root': HTMLAppRootElement
+    'app-useful-information-item': HTMLAppUsefulInformationItemElement
+    'app-useful-information': HTMLAppUsefulInformationElement
   }
 
   interface ElementTagNameMap {
     'app-header': HTMLAppHeaderElement;
     'app-root': HTMLAppRootElement;
+    'app-useful-information-item': HTMLAppUsefulInformationItemElement;
+    'app-useful-information': HTMLAppUsefulInformationElement;
   }
 
 

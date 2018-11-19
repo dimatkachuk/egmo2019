@@ -1,0 +1,14 @@
+.app-useful-information {
+  width: 100%;
+  padding: 100px 200px;
+
+  h1 {
+
+  }
+
+  &__items-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
