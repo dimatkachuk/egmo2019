@@ -4,6 +4,7 @@ html {
 
 html * {
   font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
 }
@@ -20,14 +21,6 @@ body {
   margin: 0 auto;
   @include border-box();
   padding: 0 12px;
-
-  @include breakpoint(phone-big) {
-    padding: 0 30px;
-  }
-
-  @include breakpoint(tablet) {
-    padding: 0 50px;
-  }
 }
 
 .flex {

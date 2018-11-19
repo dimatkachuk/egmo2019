@@ -12,8 +12,14 @@ import '@stencil/core';
 
 export namespace Components {
 
+  interface AppAbout {}
+  interface AppAboutAttributes extends StencilHTMLAttributes {}
+
   interface AppHeader {}
   interface AppHeaderAttributes extends StencilHTMLAttributes {}
+
+  interface AppLanding {}
+  interface AppLandingAttributes extends StencilHTMLAttributes {}
 
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
@@ -35,24 +41,40 @@ export namespace Components {
 
 declare global {
   interface StencilElementInterfaces {
+    'AppAbout': Components.AppAbout;
     'AppHeader': Components.AppHeader;
+    'AppLanding': Components.AppLanding;
     'AppRoot': Components.AppRoot;
     'AppUsefulInformationItem': Components.AppUsefulInformationItem;
     'AppUsefulInformation': Components.AppUsefulInformation;
   }
 
   interface StencilIntrinsicElements {
+    'app-about': Components.AppAboutAttributes;
     'app-header': Components.AppHeaderAttributes;
+    'app-landing': Components.AppLandingAttributes;
     'app-root': Components.AppRootAttributes;
     'app-useful-information-item': Components.AppUsefulInformationItemAttributes;
     'app-useful-information': Components.AppUsefulInformationAttributes;
   }
 
 
+  interface HTMLAppAboutElement extends Components.AppAbout, HTMLStencilElement {}
+  var HTMLAppAboutElement: {
+    prototype: HTMLAppAboutElement;
+    new (): HTMLAppAboutElement;
+  };
+
   interface HTMLAppHeaderElement extends Components.AppHeader, HTMLStencilElement {}
   var HTMLAppHeaderElement: {
     prototype: HTMLAppHeaderElement;
     new (): HTMLAppHeaderElement;
+  };
+
+  interface HTMLAppLandingElement extends Components.AppLanding, HTMLStencilElement {}
+  var HTMLAppLandingElement: {
+    prototype: HTMLAppLandingElement;
+    new (): HTMLAppLandingElement;
   };
 
   interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {}
@@ -74,14 +96,18 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'app-about': HTMLAppAboutElement
     'app-header': HTMLAppHeaderElement
+    'app-landing': HTMLAppLandingElement
     'app-root': HTMLAppRootElement
     'app-useful-information-item': HTMLAppUsefulInformationItemElement
     'app-useful-information': HTMLAppUsefulInformationElement
   }
 
   interface ElementTagNameMap {
+    'app-about': HTMLAppAboutElement;
     'app-header': HTMLAppHeaderElement;
+    'app-landing': HTMLAppLandingElement;
     'app-root': HTMLAppRootElement;
     'app-useful-information-item': HTMLAppUsefulInformationItemElement;
     'app-useful-information': HTMLAppUsefulInformationElement;
