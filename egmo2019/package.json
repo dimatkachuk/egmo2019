@@ -1,27 +1,35 @@
 {
-  "name": "@stencil/starter",
+  "name": "@stencil/lexit.ico",
   "private": true,
   "version": "0.0.1",
-  "description": "Stencil App Starter",
+  "description": "Lexit ICO",
   "scripts": {
     "build": "stencil build --prerender",
-    "start": "stencil build --dev --watch --serve",
+    "run": "stencil build --dev --watch --serve",
+    "start": "stencil build --prerender",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
-    "@stencil/core": "~0.15.1",
+    "@stencil/core": "^0.13.2",
     "@stencil/router": "~0.3.0",
-    "@stencil/sass": "^0.1.1"
+    "@stencil/sass": "^0.1.1",
+    "deep-equal": "^1.0.1",
+    "express": "^4.16.4",
+    "fetch": "^1.1.0",
+    "node-sass": "^4.10.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ionic-team/stencil-app-starter.git"
   },
-  "author": "Ionic Team",
+  "author": "LEXIT",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/ionic-team/stencil"
   },
-  "homepage": "https://github.com/ionic-team/stencil"
+  "homepage": "https://github.com/ionic-team/stencil",
+  "devDependencies": {
+    "workbox-build": "3.4.1"
+  }
 }

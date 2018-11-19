@@ -1,4 +1,4 @@
-import { Component } from '@stencil/core';
+import {Component } from '@stencil/core';
 
 @Component({
   tag: 'app-root',
@@ -11,9 +11,9 @@ export class AppRoot {
       [
         <app-header></app-header>,
         <app-landing></app-landing>,
-        <app-initial-info></app-initial-info>,
+        <app-about></app-about>,
         <app-program></app-program>,
-        <app-useful-info></app-useful-info>,
+        <app-useful-information></app-useful-information>,
         <app-contacts></app-contacts>,
         <app-footer></app-footer>
       ]

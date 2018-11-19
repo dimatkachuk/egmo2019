@@ -1,0 +1,54 @@
+@mixin breakpoint($size) {
+  @if $size == desktop-large {
+    @media only screen and (min-width: 1800px) {
+      @content;
+    }
+  } @else if $size == desktop-big {
+    @media only screen and (min-width: 1500px) {
+      @content;
+    }
+  } @else if $size == desktop {
+    @media only screen and (min-width: 1200px) {
+      @content;
+    }
+  } @else if $size == tablet-big {
+    @media only screen and (min-width: 1024px) {
+      @content;
+    }
+  } @else if $size == tablet {
+    @media only screen and (min-width: 760px) {
+      @content;
+    }
+  } @else if $size == phone-large {
+    @media only screen and (min-width: 414px) {
+      @content;
+    }
+  } @else if $size == phone-big {
+    @media only screen and (min-width: 375px) {
+      @content;
+    }
+  }
+}
+
+@mixin font-style($size, $line_height: '', $letter_spacing: '', $weight: 400) {
+  font-size: $size;
+  font-weight: $weight;
+
+  @if $line_height != '' {
+    line-height: $line_height;
+  }
+
+  @if $letter_spacing != '' {
+    letter-spacing: $letter_spacing;
+  }
+}
+
+@mixin border-box() {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@mixin box-shadow() {
+  box-shadow: 0 4px 30px 0 rgba(33,7,75,0.06);
+}
