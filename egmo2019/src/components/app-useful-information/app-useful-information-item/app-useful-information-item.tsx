@@ -10,8 +10,8 @@ export class AppUsefulInformationItem {
     render() {
         return (
             <div class="app-useful-information-item">
-                <h2>{this.viewState.title}</h2>
-                <p>{this.viewState.description}</p>
+                {/*<h2>{this.viewState.title}</h2>*/}
+                {/*<p>{this.viewState.description}</p>*/}
             </div>
         );
     }

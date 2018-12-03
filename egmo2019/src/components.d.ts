@@ -8,6 +8,9 @@
 import '@stencil/core';
 
 
+import {
+  IAppProgram,
+} from './interfaces/app-program.interface';
 
 
 export namespace Components {
@@ -21,8 +24,12 @@ export namespace Components {
   interface AppLanding {}
   interface AppLandingAttributes extends StencilHTMLAttributes {}
 
-  interface AppProgram {}
-  interface AppProgramAttributes extends StencilHTMLAttributes {}
+  interface AppProgram {
+    'viewState': IAppProgram;
+  }
+  interface AppProgramAttributes extends StencilHTMLAttributes {
+    'viewState'?: IAppProgram;
+  }
 
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}

@@ -11,16 +11,16 @@ export class AppUsefulInformation {
         return (
             <section class="app-useful-information">
                 <h1>
-                    {this.viewState.title}
-                    <span>{this.viewState.subtitle}</span>
+                    {/*{this.viewState.title}*/}
+                    {/*<span>{this.viewState.subtitle}</span>*/}
                 </h1>
                 <div class="app-useful-information__items-wrapper">
                     {
-                        this.viewState.infoItems.map(item =>
-                            (
-                                <app-useful-information-item viewState={item}/>
-                            )
-                        )
+                        // this.viewState.infoItems.map(item =>
+                        //     (
+                        //         <app-useful-information-item viewState={item}/>
+                        //     )
+                        // )
                     }
                 </div>
             </section>
