@@ -8,12 +8,41 @@
 import '@stencil/core';
 
 
+import {
+  IAppContactsItem,
+} from './interfaces/app-contacts-item.interface';
+import {
+  IAppContacts,
+} from './interfaces/app-contacts.interface';
+import {
+  IAppUsefulInformation,
+} from './interfaces/app-useful-information.interface';
 
 
 export namespace Components {
 
+  interface AppAbout {}
+  interface AppAboutAttributes extends StencilHTMLAttributes {}
+
+  interface AppContactsItem {
+    'viewState': IAppContactsItem;
+  }
+  interface AppContactsItemAttributes extends StencilHTMLAttributes {
+    'viewState'?: IAppContactsItem;
+  }
+
+  interface AppContacts {
+    'viewState': IAppContacts;
+  }
+  interface AppContactsAttributes extends StencilHTMLAttributes {
+    'viewState'?: IAppContacts;
+  }
+
   interface AppHeader {}
   interface AppHeaderAttributes extends StencilHTMLAttributes {}
+
+  interface AppLanding {}
+  interface AppLandingAttributes extends StencilHTMLAttributes {}
 
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
@@ -26,33 +55,65 @@ export namespace Components {
   }
 
   interface AppUsefulInformation {
-    'viewState': any;
+    'viewState': IAppUsefulInformation;
   }
   interface AppUsefulInformationAttributes extends StencilHTMLAttributes {
-    'viewState'?: any;
+    'viewState'?: IAppUsefulInformation;
   }
 }
 
 declare global {
   interface StencilElementInterfaces {
+    'AppAbout': Components.AppAbout;
+    'AppContactsItem': Components.AppContactsItem;
+    'AppContacts': Components.AppContacts;
     'AppHeader': Components.AppHeader;
+    'AppLanding': Components.AppLanding;
     'AppRoot': Components.AppRoot;
     'AppUsefulInformationItem': Components.AppUsefulInformationItem;
     'AppUsefulInformation': Components.AppUsefulInformation;
   }
 
   interface StencilIntrinsicElements {
+    'app-about': Components.AppAboutAttributes;
+    'app-contacts-item': Components.AppContactsItemAttributes;
+    'app-contacts': Components.AppContactsAttributes;
     'app-header': Components.AppHeaderAttributes;
+    'app-landing': Components.AppLandingAttributes;
     'app-root': Components.AppRootAttributes;
     'app-useful-information-item': Components.AppUsefulInformationItemAttributes;
     'app-useful-information': Components.AppUsefulInformationAttributes;
   }
 
 
+  interface HTMLAppAboutElement extends Components.AppAbout, HTMLStencilElement {}
+  var HTMLAppAboutElement: {
+    prototype: HTMLAppAboutElement;
+    new (): HTMLAppAboutElement;
+  };
+
+  interface HTMLAppContactsItemElement extends Components.AppContactsItem, HTMLStencilElement {}
+  var HTMLAppContactsItemElement: {
+    prototype: HTMLAppContactsItemElement;
+    new (): HTMLAppContactsItemElement;
+  };
+
+  interface HTMLAppContactsElement extends Components.AppContacts, HTMLStencilElement {}
+  var HTMLAppContactsElement: {
+    prototype: HTMLAppContactsElement;
+    new (): HTMLAppContactsElement;
+  };
+
   interface HTMLAppHeaderElement extends Components.AppHeader, HTMLStencilElement {}
   var HTMLAppHeaderElement: {
     prototype: HTMLAppHeaderElement;
     new (): HTMLAppHeaderElement;
+  };
+
+  interface HTMLAppLandingElement extends Components.AppLanding, HTMLStencilElement {}
+  var HTMLAppLandingElement: {
+    prototype: HTMLAppLandingElement;
+    new (): HTMLAppLandingElement;
   };
 
   interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {}
@@ -74,14 +135,22 @@ declare global {
   };
 
   interface HTMLElementTagNameMap {
+    'app-about': HTMLAppAboutElement
+    'app-contacts-item': HTMLAppContactsItemElement
+    'app-contacts': HTMLAppContactsElement
     'app-header': HTMLAppHeaderElement
+    'app-landing': HTMLAppLandingElement
     'app-root': HTMLAppRootElement
     'app-useful-information-item': HTMLAppUsefulInformationItemElement
     'app-useful-information': HTMLAppUsefulInformationElement
   }
 
   interface ElementTagNameMap {
+    'app-about': HTMLAppAboutElement;
+    'app-contacts-item': HTMLAppContactsItemElement;
+    'app-contacts': HTMLAppContactsElement;
     'app-header': HTMLAppHeaderElement;
+    'app-landing': HTMLAppLandingElement;
     'app-root': HTMLAppRootElement;
     'app-useful-information-item': HTMLAppUsefulInformationItemElement;
     'app-useful-information': HTMLAppUsefulInformationElement;
