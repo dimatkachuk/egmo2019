@@ -9,14 +9,37 @@ import '@stencil/core';
 
 
 import {
+  IAppContactsItem,
+} from './interfaces/app-contacts-item.interface';
+import {
+  IAppContacts,
+} from './interfaces/app-contacts.interface';
+import {
   IAppProgram,
 } from './interfaces/app-program.interface';
+import {
+  IAppUsefulInformation,
+} from './interfaces/app-useful-information.interface';
 
 
 export namespace Components {
 
   interface AppAbout {}
   interface AppAboutAttributes extends StencilHTMLAttributes {}
+
+  interface AppContactsItem {
+    'viewState': IAppContactsItem;
+  }
+  interface AppContactsItemAttributes extends StencilHTMLAttributes {
+    'viewState'?: IAppContactsItem;
+  }
+
+  interface AppContacts {
+    'viewState': IAppContacts;
+  }
+  interface AppContactsAttributes extends StencilHTMLAttributes {
+    'viewState'?: IAppContacts;
+  }
 
   interface AppHeader {}
   interface AppHeaderAttributes extends StencilHTMLAttributes {}
@@ -42,16 +65,18 @@ export namespace Components {
   }
 
   interface AppUsefulInformation {
-    'viewState': any;
+    'viewState': IAppUsefulInformation;
   }
   interface AppUsefulInformationAttributes extends StencilHTMLAttributes {
-    'viewState'?: any;
+    'viewState'?: IAppUsefulInformation;
   }
 }
 
 declare global {
   interface StencilElementInterfaces {
     'AppAbout': Components.AppAbout;
+    'AppContactsItem': Components.AppContactsItem;
+    'AppContacts': Components.AppContacts;
     'AppHeader': Components.AppHeader;
     'AppLanding': Components.AppLanding;
     'AppProgram': Components.AppProgram;
@@ -62,6 +87,8 @@ declare global {
 
   interface StencilIntrinsicElements {
     'app-about': Components.AppAboutAttributes;
+    'app-contacts-item': Components.AppContactsItemAttributes;
+    'app-contacts': Components.AppContactsAttributes;
     'app-header': Components.AppHeaderAttributes;
     'app-landing': Components.AppLandingAttributes;
     'app-program': Components.AppProgramAttributes;
@@ -75,6 +102,18 @@ declare global {
   var HTMLAppAboutElement: {
     prototype: HTMLAppAboutElement;
     new (): HTMLAppAboutElement;
+  };
+
+  interface HTMLAppContactsItemElement extends Components.AppContactsItem, HTMLStencilElement {}
+  var HTMLAppContactsItemElement: {
+    prototype: HTMLAppContactsItemElement;
+    new (): HTMLAppContactsItemElement;
+  };
+
+  interface HTMLAppContactsElement extends Components.AppContacts, HTMLStencilElement {}
+  var HTMLAppContactsElement: {
+    prototype: HTMLAppContactsElement;
+    new (): HTMLAppContactsElement;
   };
 
   interface HTMLAppHeaderElement extends Components.AppHeader, HTMLStencilElement {}
@@ -115,6 +154,8 @@ declare global {
 
   interface HTMLElementTagNameMap {
     'app-about': HTMLAppAboutElement
+    'app-contacts-item': HTMLAppContactsItemElement
+    'app-contacts': HTMLAppContactsElement
     'app-header': HTMLAppHeaderElement
     'app-landing': HTMLAppLandingElement
     'app-program': HTMLAppProgramElement
@@ -125,6 +166,8 @@ declare global {
 
   interface ElementTagNameMap {
     'app-about': HTMLAppAboutElement;
+    'app-contacts-item': HTMLAppContactsItemElement;
+    'app-contacts': HTMLAppContactsElement;
     'app-header': HTMLAppHeaderElement;
     'app-landing': HTMLAppLandingElement;
     'app-program': HTMLAppProgramElement;

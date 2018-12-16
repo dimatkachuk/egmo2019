@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "description": "Lexit ICO",
   "scripts": {
-    "build": "stencil build --prerender",
+    "build": "stencil build",
     "run": "stencil build --dev --watch --serve",
     "start": "stencil build --prerender",
     "test": "stencil test --spec --e2e",

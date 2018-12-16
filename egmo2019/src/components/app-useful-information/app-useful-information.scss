@@ -1,14 +1,22 @@
 .app-useful-information {
   width: 100%;
-  padding: 100px 200px;
-
+  box-sizing: border-box;
   h1 {
+    width: 100%;
+    font-size: 40px;
+    color: #051B42;
+    text-align: center;
+    text-transform: uppercase;
 
+    span {
+      color: #00548C;
+    }
   }
 
   &__items-wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 }

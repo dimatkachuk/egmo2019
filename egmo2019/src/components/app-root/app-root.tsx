@@ -1,5 +1,6 @@
-import { Component } from '@stencil/core';
-import {APP_PROGRAM_STATE_ENG} from "../../consts/program.const";
+import {Component } from '@stencil/core';
+import {APP_USEFUL_INFORMATION_STATE_ENG} from "../../consts/app-useful-information.const";
+import {APP_CONTACTS_STATE_ENG} from "../../consts/app-contacts.const";
 
 @Component({
   tag: 'app-root',
@@ -13,9 +14,9 @@ export class AppRoot {
         <app-header></app-header>,
         <app-landing></app-landing>,
         <app-about></app-about>,
-        <app-program viewState={APP_PROGRAM_STATE_ENG}></app-program>,
-        <app-useful-information></app-useful-information>,
-        <app-contacts></app-contacts>,
+        <app-program></app-program>,
+        <app-useful-information viewState={APP_USEFUL_INFORMATION_STATE_ENG}></app-useful-information>,
+        <app-contacts viewState={APP_CONTACTS_STATE_ENG}></app-contacts>,
         <app-footer></app-footer>
       ]
     );
