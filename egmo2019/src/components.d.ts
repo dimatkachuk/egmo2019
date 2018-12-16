@@ -15,6 +15,9 @@ import {
   IAppContacts,
 } from './interfaces/app-contacts.interface';
 import {
+  IAppProgram,
+} from './interfaces/app-program.interface';
+import {
   IAppUsefulInformation,
 } from './interfaces/app-useful-information.interface';
 
@@ -44,6 +47,13 @@ export namespace Components {
   interface AppLanding {}
   interface AppLandingAttributes extends StencilHTMLAttributes {}
 
+  interface AppProgram {
+    'viewState': IAppProgram;
+  }
+  interface AppProgramAttributes extends StencilHTMLAttributes {
+    'viewState'?: IAppProgram;
+  }
+
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
 
@@ -69,6 +79,7 @@ declare global {
     'AppContacts': Components.AppContacts;
     'AppHeader': Components.AppHeader;
     'AppLanding': Components.AppLanding;
+    'AppProgram': Components.AppProgram;
     'AppRoot': Components.AppRoot;
     'AppUsefulInformationItem': Components.AppUsefulInformationItem;
     'AppUsefulInformation': Components.AppUsefulInformation;
@@ -80,6 +91,7 @@ declare global {
     'app-contacts': Components.AppContactsAttributes;
     'app-header': Components.AppHeaderAttributes;
     'app-landing': Components.AppLandingAttributes;
+    'app-program': Components.AppProgramAttributes;
     'app-root': Components.AppRootAttributes;
     'app-useful-information-item': Components.AppUsefulInformationItemAttributes;
     'app-useful-information': Components.AppUsefulInformationAttributes;
@@ -116,6 +128,12 @@ declare global {
     new (): HTMLAppLandingElement;
   };
 
+  interface HTMLAppProgramElement extends Components.AppProgram, HTMLStencilElement {}
+  var HTMLAppProgramElement: {
+    prototype: HTMLAppProgramElement;
+    new (): HTMLAppProgramElement;
+  };
+
   interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {}
   var HTMLAppRootElement: {
     prototype: HTMLAppRootElement;
@@ -140,6 +158,7 @@ declare global {
     'app-contacts': HTMLAppContactsElement
     'app-header': HTMLAppHeaderElement
     'app-landing': HTMLAppLandingElement
+    'app-program': HTMLAppProgramElement
     'app-root': HTMLAppRootElement
     'app-useful-information-item': HTMLAppUsefulInformationItemElement
     'app-useful-information': HTMLAppUsefulInformationElement
@@ -151,6 +170,7 @@ declare global {
     'app-contacts': HTMLAppContactsElement;
     'app-header': HTMLAppHeaderElement;
     'app-landing': HTMLAppLandingElement;
+    'app-program': HTMLAppProgramElement;
     'app-root': HTMLAppRootElement;
     'app-useful-information-item': HTMLAppUsefulInformationItemElement;
     'app-useful-information': HTMLAppUsefulInformationElement;
