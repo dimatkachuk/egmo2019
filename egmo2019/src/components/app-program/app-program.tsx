@@ -16,8 +16,8 @@ export class AppProgram {
                     <p class="program-title">
                         {this.viewState.title}&nbsp;<span>{this.viewState.titleSuffix}</span>
                     </p>
-                    <div class="program-container flex">
-                        <div class="program-baseline"></div>
+                    <div class="program-container flex-center">
+                        {/*<div class="program-baseline"></div>*/}
                         <div class="program-schedule flex-column-between">
                             {
                                 this.viewState.dailyPrograms.map((day, i) =>
@@ -31,7 +31,7 @@ export class AppProgram {
                                         <div class="program-schedule-item-right flex-column">
                                             {
                                                 day.schedule.map((event) =>
-                                                    <p class="">{event.name}&nbsp;({event.time})</p>
+                                                    <p class="day-activity">{event.name}&nbsp;({event.time})</p>
                                                 )
                                             }
                                         </div>
