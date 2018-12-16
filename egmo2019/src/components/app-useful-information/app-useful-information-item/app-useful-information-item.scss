@@ -1,0 +1,20 @@
+.app-useful-information-item {
+  background: #FFFFFF;
+  box-shadow: 0 2px 33px 0 rgba(0,0,0,0.16);
+  width: 454px;
+  height: 391px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    font-size: 40px;
+    color: #00548C;
+    text-align: center;
+  }
+  p {
+    font-size: 25px;
+    color: #051B42;
+    text-align: justify;
+  }
+}

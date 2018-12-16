@@ -8,6 +8,9 @@
 import '@stencil/core';
 
 
+import {
+  IAppProgram,
+} from './interfaces/app-program.interface';
 
 
 export namespace Components {
@@ -21,8 +24,29 @@ export namespace Components {
   interface AppLanding {}
   interface AppLandingAttributes extends StencilHTMLAttributes {}
 
+  interface AppProgram {
+    'viewState': IAppProgram;
+  }
+  interface AppProgramAttributes extends StencilHTMLAttributes {
+    'viewState'?: IAppProgram;
+  }
+
   interface AppRoot {}
   interface AppRootAttributes extends StencilHTMLAttributes {}
+
+  interface AppUsefulInformationItem {
+    'viewState': any;
+  }
+  interface AppUsefulInformationItemAttributes extends StencilHTMLAttributes {
+    'viewState'?: any;
+  }
+
+  interface AppUsefulInformation {
+    'viewState': any;
+  }
+  interface AppUsefulInformationAttributes extends StencilHTMLAttributes {
+    'viewState'?: any;
+  }
 }
 
 declare global {
@@ -30,14 +54,20 @@ declare global {
     'AppAbout': Components.AppAbout;
     'AppHeader': Components.AppHeader;
     'AppLanding': Components.AppLanding;
+    'AppProgram': Components.AppProgram;
     'AppRoot': Components.AppRoot;
+    'AppUsefulInformationItem': Components.AppUsefulInformationItem;
+    'AppUsefulInformation': Components.AppUsefulInformation;
   }
 
   interface StencilIntrinsicElements {
     'app-about': Components.AppAboutAttributes;
     'app-header': Components.AppHeaderAttributes;
     'app-landing': Components.AppLandingAttributes;
+    'app-program': Components.AppProgramAttributes;
     'app-root': Components.AppRootAttributes;
+    'app-useful-information-item': Components.AppUsefulInformationItemAttributes;
+    'app-useful-information': Components.AppUsefulInformationAttributes;
   }
 
 
@@ -59,24 +89,48 @@ declare global {
     new (): HTMLAppLandingElement;
   };
 
+  interface HTMLAppProgramElement extends Components.AppProgram, HTMLStencilElement {}
+  var HTMLAppProgramElement: {
+    prototype: HTMLAppProgramElement;
+    new (): HTMLAppProgramElement;
+  };
+
   interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {}
   var HTMLAppRootElement: {
     prototype: HTMLAppRootElement;
     new (): HTMLAppRootElement;
   };
 
+  interface HTMLAppUsefulInformationItemElement extends Components.AppUsefulInformationItem, HTMLStencilElement {}
+  var HTMLAppUsefulInformationItemElement: {
+    prototype: HTMLAppUsefulInformationItemElement;
+    new (): HTMLAppUsefulInformationItemElement;
+  };
+
+  interface HTMLAppUsefulInformationElement extends Components.AppUsefulInformation, HTMLStencilElement {}
+  var HTMLAppUsefulInformationElement: {
+    prototype: HTMLAppUsefulInformationElement;
+    new (): HTMLAppUsefulInformationElement;
+  };
+
   interface HTMLElementTagNameMap {
     'app-about': HTMLAppAboutElement
     'app-header': HTMLAppHeaderElement
     'app-landing': HTMLAppLandingElement
+    'app-program': HTMLAppProgramElement
     'app-root': HTMLAppRootElement
+    'app-useful-information-item': HTMLAppUsefulInformationItemElement
+    'app-useful-information': HTMLAppUsefulInformationElement
   }
 
   interface ElementTagNameMap {
     'app-about': HTMLAppAboutElement;
     'app-header': HTMLAppHeaderElement;
     'app-landing': HTMLAppLandingElement;
+    'app-program': HTMLAppProgramElement;
     'app-root': HTMLAppRootElement;
+    'app-useful-information-item': HTMLAppUsefulInformationItemElement;
+    'app-useful-information': HTMLAppUsefulInformationElement;
   }
 
 
